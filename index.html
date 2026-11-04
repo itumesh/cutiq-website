@@ -42,10 +42,10 @@
         <span class="line"><em class="split">stop scrolling for.</em></span>
       </h1>
       <p class="hero-sub fade" style="--d:.7s">Install CutIQ in Claude, type one line, and your raw clip comes back edited: glass widgets, orbit carousels, episode timelines, split hooks, glowing titles behind you and live checklists. The reel here is one real clip, edited six ways. No timeline, no editing software.</p>
-      <p class="skill-note fade" style="--d:.78s"><i class="spark"></i><span><b>Every edit on this page is a Claude skill.</b> Type <code>/xray-scan</code> or <code>/glass-widgets</code> in Claude and it edits your clip for you.</span></p>
+      <p class="skill-note fade" style="--d:.78s"><i class="spark"></i><span><b>Every edit on this page is a Claude skill.</b> Type <code>/glass-widgets</code> or <code>/pull-back-reveal</code> in Claude and it edits your clip for you.</span></p>
       <div class="hero-cta fade" style="--d:.85s">
         <a class="btn btn-dark btn-lg" href="#pricing" data-cta="hero"><span>Get all 399 skills · ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
-        <a class="btn btn-line btn-lg" href="#showreel"><i class="play"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z"/></svg></i><span>Watch 1 clip get 8 edits</span></a>
+        <a class="btn btn-line btn-lg" href="#showreel"><i class="play"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z"/></svg></i><span>Watch 1 clip get 7 edits</span></a>
       </div>
       <div class="hero-proof fade" style="--d:1s">
         <div><b>399</b><span>ready skills</span></div>
@@ -69,9 +69,9 @@
 <section class="sec sec-dark" id="showreel">
   <div class="wrap sr-wrap">
     <div class="sr-copy reveal">
-      <p class="eyebrow light">One clip · eight skills</p>
+      <p class="eyebrow light">One clip · seven skills</p>
       <h2 class="big">Type a command.<br><em>Get a scroll-stopper.</em></h2>
-      <p>This is how CutIQ works inside Claude. One raw clip, one command at a time, and Claude builds each edit: x-ray hooks, schematic outlines, AI B-roll, phone mockups, glass widgets, editor overlays and a pull-back reveal. Tap any command to play it.</p>
+      <p>This is how CutIQ works inside Claude. One raw clip, one command at a time, and Claude builds each edit: schematic outlines, AI B-roll, phone mockups, glass widgets, editor overlays and a pull-back reveal. Tap any command to play it.</p>
       <div class="sr-list" id="srList"></div>
     </div>
     <div class="sr-phone"><div class="phone"><div class="sr" id="sr"></div></div></div>
@@ -159,12 +159,12 @@
         <div class="meter"><i id="meterFill"></i><span>−14.0 LUFS</span></div>
       </article>
       <article class="tile t-tall reveal">
-        <div class="tile-copy"><h3>Any frame, any screen.</h3><p>16:9, 9:16, 1:1 and 4:5 — reframed around the subject.</p></div>
-        <div class="reframe"><div class="rf-src"><div class="stage" data-fx="grade"></div><span class="rf-box"></span></div></div>
+        <div class="tile-copy"><h3>Any frame, any screen.</h3><p>One landscape shot, reframed for every platform. The crop follows her face.</p></div>
+        <div class="reframe rf2"><div class="rf-src"><video class="rf-vid" src="assets/media/lady-land.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="rf-box" id="rfBox"><em id="rfLabel">9:16</em><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></span><span class="rf-track"><b></b>Face tracked</span></div><div class="rf-chips" id="rfChips"><button type="button" class="on" data-r="9:16">9:16 Reels</button><button type="button" data-r="1:1">1:1 Feed</button><button type="button" data-r="4:5">4:5 Post</button><button type="button" data-r="16:9">16:9 YouTube</button></div></div>
       </article>
       <article class="tile t-wide reveal">
-        <div class="tile-copy"><h3>Cinema colour, one line.</h3><p>Flat phone footage gets a warm, film-style grade. Drag to compare.</p></div>
-        <div class="cmp" id="cmp"><div class="stage" data-look="raw" data-fx=""></div><div class="cmp-after"><div class="stage" data-fx="grade"></div></div><span class="cmp-h"></span><span class="cmp-tag l">RAW</span><span class="cmp-tag r">BOLLYWOOD WARM</span><input type="range" id="cmpRange" min="0" max="100" value="50" aria-label="Compare raw and graded"></div>
+        <div class="tile-copy"><h3>Cinema colour, one line.</h3><p>Flat, washed-out footage becomes a film look. Drag the line, or pick a grade.</p></div>
+        <div class="cmp cmp2" id="cmp"><video class="cg-v raw" src="assets/media/lady.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cmp-after"><video class="cg-v graded" data-grade="warm" src="assets/media/lady.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video></div><span class="cmp-h"></span><span class="cmp-tag l">RAW · LOG</span><span class="cmp-tag r" id="cgName">BOLLYWOOD WARM</span><input type="range" id="cmpRange" min="0" max="100" value="50" aria-label="Compare raw and graded"><div class="cg-chips" id="cgChips"><button type="button" class="on" data-g="warm" data-n="BOLLYWOOD WARM">Bollywood Warm</button><button type="button" data-g="teal" data-n="TEAL &amp; ORANGE">Teal &amp; Orange</button><button type="button" data-g="night" data-n="MUMBAI NIGHT">Mumbai Night</button><button type="button" data-g="film" data-n="VINTAGE FILM">Vintage Film</button></div></div>
       </article>
     </div>
   </div>

@@ -28,7 +28,6 @@
   }
 
   var SK = [
-    { id: "xray", cmd: "/xray-scan", d: "X-ray body scan with a glitch hook" },
     { id: "blueprint", cmd: "/blueprint-outline", d: "Glowing schematic outline with labels" },
     { id: "aipanel", cmd: "/ai-broll-panel", d: "Prompt card and B-roll shots above you" },
     { id: "mockup", cmd: "/phone-mockup", d: "Your reel in a hand-held phone" },
@@ -42,7 +41,7 @@
   var px = ""; for (var p = 0; p < 24; p++) px += '<i style="--dl:' + (Math.random() * 1.3).toFixed(2) + 's"></i>';
   var chips = [["Kinetic type", 6, 14, 0], ["Logo reveal", 60, 9, 0], ["Colour grade", 66, 30, 1], ["Beat sync", 10, 70, 1], ["Auto zoom", 4, 46, 0], ["3D mockup", 64, 62, 0], ["Live captions", 58, 84, 1], ["Text behind", 8, 88, 0]]
     .map(function (c, i) { return '<span class="' + (c[3] ? "b" : "") + '" style="left:' + c[1] + "%;top:" + c[2] + "%;--fd:" + (i * 0.37).toFixed(2) + 's"><i></i>' + c[0] + "</span>"; }).join("");
-  var tiles = [["xray", "lk-xray", ""], ["blueprint", "lk-bp", ""], ["aipanel", "rc-ai", "grade"], ["mockup", "rc-mock", "grade"], ["widgets", "", "glass grade"], ["editor", "rc-ed", "timeline"]]
+  var tiles = [["blueprint", "lk-bp", ""], ["aipanel", "rc-ai", "grade"], ["mockup", "rc-mock", "grade"], ["widgets", "", "glass grade"], ["editor", "rc-ed", "timeline"], ["pullback", "rc-pb", "grade"]]
     .map(function (t) { var s = SK.filter(function (k) { return k.id === t[0]; })[0]; return '<div class="rc-tile">' + stage(t[2], "rc-st " + t[1]) + "<small>" + s.cmd + "</small></div>"; }).join("");
 
   sr.innerHTML =
@@ -71,7 +70,7 @@
     '<div class="ed-fx"><b>Effect controls</b><p>Scale<span style="--v:72%"></span></p><p>Position<span style="--v:50%"></span></p><p>Opacity<span style="--v:100%"></span></p>' +
     '<b>Colour</b><p>Exposure<span style="--v:58%;--a:edA"></span></p><p>Contrast<span style="--v:64%;--a:edB"></span></p><p>Highlights<span style="--v:40%;--a:edA"></span></p><p>Saturation<span style="--v:70%;--a:edB"></span></p></div>' +
     '<div class="ed-tl"><div class="ruler"></div>' +
-    '<div class="trk"><em>V3</em><i class="k" style="left:2%;width:20%">/xray-scan</i><i class="k" style="left:24%;width:20%">/ai-broll</i><i class="k" style="left:46%;width:20%">/mockup</i><i class="k" style="left:68%;width:18%">/widgets</i></div>' +
+    '<div class="trk"><em>V3</em><i class="k" style="left:2%;width:20%">/blueprint</i><i class="k" style="left:24%;width:20%">/ai-broll</i><i class="k" style="left:46%;width:20%">/mockup</i><i class="k" style="left:68%;width:18%">/widgets</i></div>' +
     '<div class="trk"><em>V2</em><i class="a" style="left:2%;width:94%">Adjustment · grade</i></div>' +
     '<div class="trk"><em>V1</em><i class="v" style="left:2%;width:94%">raw_clip.mp4</i></div>' +
     '<div class="trk"><em>A1</em><i class="w" style="left:2%;width:94%"></i></div>' +
@@ -81,7 +80,7 @@
     stage("grade", "pb-st") + '</div></div>' +
     '<div class="pb-cap"><div class="pb-h"><i class="spark"></i><span>LIVE CAPTIONS</span></div><p><span style="--dl:1.1s">One</span> <span style="--dl:1.35s">line</span> <span style="--dl:1.6s">in.</span> <span class="y" style="--dl:1.9s">Finished</span> <span class="y" style="--dl:2.15s">reel</span> <span style="--dl:2.4s">out.</span></p>' +
     '<svg viewBox="0 0 300 70" class="pb-chart"><path d="M4 62C50 60 80 58 110 52s60-6 90-20 56-24 96-28"/><circle cx="296" cy="4" r="4"/></svg><b class="pb-up">REACH <em>+212%</em></b></div></div>' +
-    '<div class="sr-l sr-rc"><div class="rc-h"><small>Comment-worthy in one line</small><b>8 skills.<br><em>1 clip.</em></b><span>Zero timeline. Zero editing.</span></div><div class="rc-grid">' + tiles + "</div>" +
+    '<div class="sr-l sr-rc"><div class="rc-h"><small>Comment-worthy in one line</small><b>7 skills.<br><em>1 clip.</em></b><span>Zero timeline. Zero editing.</span></div><div class="rc-grid">' + tiles + "</div>" +
     '<a class="rc-cta" href="#pricing" data-pay>Get all 399 skills · ₹<span class="js-price">399</span></a></div>' +
     '<div class="sr-cmd"><div class="cm-top"><span><i class="spark"></i>CutIQ skills</span><em>in Claude</em></div>' +
     '<div class="cm-hint"><b>raw_clip.mp4</b><span>0:34 · uploaded · pick a skill</span></div><div class="cm-msg"><p>Editing with <b class="cm-name"></b>…</p><div class="cm-thumb">' + stage("", "cm-st") + '<div class="cm-pr"><i></i></div><small>Rendering <span class="cm-pct">0</span>%</small></div></div>' +
@@ -98,7 +97,7 @@
   function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
   function every(fn, ms) { var id = setInterval(fn, ms); ivs.push(id); return id; }
   function clear() { timers.forEach(clearTimeout); ivs.forEach(clearInterval); timers = []; ivs = []; }
-  var LOOK = { xray: ["lk-xray", ""], blueprint: ["lk-bp", ""], aipanel: ["", "grade"], widgets: ["", "grade"] };
+  var LOOK = { blueprint: ["lk-bp", ""], aipanel: ["", "grade"], widgets: ["", "grade"] };
 
   function run(i) {
     clear(); cur = i; var s = SK[i], tok = ++token;
@@ -108,7 +107,7 @@
     var apply = function () { if (tok !== token) return; sr.dataset.s = s.id; main.className = "sr-main " + lk[0]; mainStage.dataset.fx = lk[1]; };
     if (!sr.dataset.s) apply(); else setTimeout(apply, 340);
     $(".sr-tag", sr).textContent = s.cmd; $(".cm-name", sr).textContent = s.cmd;
-    menu.innerHTML = [SK[(i + 7) % 8], s, SK[(i + 1) % 8]].map(function (k) { return '<p class="' + (k === s ? "on" : "") + '"><b>' + k.cmd + "</b><small>" + k.d + "</small></p>"; }).join("");
+    menu.innerHTML = [SK[(i + SK.length - 1) % SK.length], s, SK[(i + 1) % SK.length]].map(function (k) { return '<p class="' + (k === s ? "on" : "") + '"><b>' + k.cmd + "</b><small>" + k.d + "</small></p>"; }).join("");
     $$("button", list).forEach(function (b, k) { b.classList.toggle("on", k === i); b.classList.toggle("seen", k < i); });
     typed.textContent = "";
     var n = 0, speed = Math.max(45, Math.floor((T_CMD - 400) / s.cmd.length));
@@ -168,4 +167,81 @@
     b.querySelector("span").textContent = v.muted ? "Sound" : "Mute";
   });
   if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) tryPlay(); else v.pause(); }); }, { threshold: 0.2 }).observe(v);
+})();
+/* real footage in every stage: lazy-load, play only what is on screen, keep the cut-out layer in sync */
+(function () {
+  var REC = /[?&](rec|srtest)\b/.test(location.search);
+  function needsCut(st) { return /\b(spotlight|orbit)\b/.test(st.getAttribute("data-fx") || ""); }
+  function srcFor(v) {
+    var st = v.closest(".stage"), wrap = st && st.parentElement;
+    if (v.classList.contains("lady") && wrap && wrap.classList.contains("lk-bp")) return "assets/media/lady-bp.mp4";
+    return v.getAttribute("data-src");
+  }
+  function load(v) { var s = srcFor(v); if (s && v.getAttribute("src") !== s) { v.setAttribute("src", s); v.load(); } }
+  function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  var visible = new Set();
+  function refresh(st) {
+    var base = st.querySelector("video.lady"), cut = st.querySelector("video.lady-cut");
+    if (!base) return;
+    var on = visible.has(st) || REC;
+    load(base);
+    if (on) play(base); else base.pause();
+    if (cut) {
+      if (needsCut(st)) { load(cut); if (on) { cut.currentTime = base.currentTime || 0; play(cut); } else cut.pause(); }
+      else cut.pause();
+    }
+  }
+  var stages = Array.prototype.slice.call(document.querySelectorAll(".stage"));
+  if ("IntersectionObserver" in window && !REC) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); refresh(e.target); }); }, { rootMargin: "200px 0px" });
+    stages.forEach(function (st) { io.observe(st); });
+  } else stages.forEach(refresh);
+  /* effects change data-fx / look classes at runtime: re-check sources */
+  var mo = new MutationObserver(function (ms) { ms.forEach(function (m) { var st = m.target.classList.contains("stage") ? m.target : m.target.querySelector(".stage"); if (st) refresh(st); }); });
+  stages.forEach(function (st) { mo.observe(st, { attributes: true, attributeFilter: ["data-fx"] }); if (st.parentElement) mo.observe(st.parentElement, { attributes: true, attributeFilter: ["class"] }); });
+  /* keep cut-out locked to the base clip */
+  setInterval(function () {
+    stages.forEach(function (st) {
+      var b = st.querySelector("video.lady"), c = st.querySelector("video.lady-cut");
+      if (b && c && !c.paused && Math.abs(c.currentTime - b.currentTime) > 0.06) c.currentTime = b.currentTime;
+    });
+  }, 400);
+  /* compare sliders: two clips side by side must show the same frame */
+  [["#baRaw", "#baEdit"], ["#cmpX", "#cmpX"]].forEach(function (p) {
+    var a = document.querySelector(p[0] + " video.lady"), b = document.querySelector(p[1] + " video.lady");
+    if (a && b) setInterval(function () { if (!a.paused && Math.abs(a.currentTime - b.currentTime) > 0.04) b.currentTime = a.currentTime; }, 300);
+  });
+})();
+/* colour grade tile: grade chips + keep both halves on the same frame */
+(function () {
+  var cmp = document.getElementById("cmp"); if (!cmp) return;
+  var raw = cmp.querySelector(".cg-v.raw"), gr = cmp.querySelector(".cg-v.graded"), name = document.getElementById("cgName");
+  var chips = Array.prototype.slice.call(cmp.querySelectorAll("#cgChips button")), k = 0, auto = true;
+  function pick(b) { chips.forEach(function (c) { c.classList.toggle("on", c === b); }); gr.setAttribute("data-grade", b.dataset.g); if (name) name.textContent = b.dataset.n; }
+  chips.forEach(function (b) { b.addEventListener("click", function () { auto = false; pick(b); }); });
+  setInterval(function () { if (auto && !document.hidden) { k = (k + 1) % chips.length; pick(chips[k]); } }, 2600);
+  setInterval(function () { if (raw && gr && !raw.paused && Math.abs(raw.currentTime - gr.currentTime) > 0.04) gr.currentTime = raw.currentTime; }, 300);
+})();
+/* reframe tile: crop box per platform, centred on her face with a small tracking drift */
+(function () {
+  var box = document.getElementById("rfBox"); if (!box) return;
+  var src = box.parentElement, label = document.getElementById("rfLabel");
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#rfChips button")), cur = "9:16", k = 0, auto = true, t0 = Date.now();
+  var FACE = 0.455;                                   // her face sits at ~45% of the landscape frame
+  function place() {
+    var W = src.clientWidth, H = src.clientHeight; if (!W || !H) return;
+    var p = cur.split(":"), r = p[0] / p[1];
+    var vidH = W * 9 / 16 > H ? H : W * 9 / 16;      // object-fit:cover keeps 16:9 inside the tile
+    var bh = cur === "16:9" ? 1 : 0.88, bw = Math.min(1, r * bh * H / W);
+    var drift = Math.sin((Date.now() - t0) / 1400) * 0.012;
+    var cx = Math.min(1 - bw / 2, Math.max(bw / 2, FACE + drift));
+    box.style.setProperty("--bw", (bw * 100).toFixed(2) + "%");
+    box.style.setProperty("--bx", ((cx - bw / 2) * 100).toFixed(2) + "%");
+    box.style.top = box.style.bottom = ((1 - bh) / 2 * 100).toFixed(2) + "%";
+    if (label) label.textContent = cur;
+  }
+  function pick(b) { chips.forEach(function (c) { c.classList.toggle("on", c === b); }); cur = b.dataset.r; place(); }
+  chips.forEach(function (b) { b.addEventListener("click", function () { auto = false; pick(b); }); });
+  setInterval(function () { if (auto && !document.hidden) { k = (k + 1) % chips.length; pick(chips[k]); } }, 2400);
+  setInterval(place, 700); window.addEventListener("resize", place); place();
 })();

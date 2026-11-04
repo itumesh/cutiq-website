@@ -73,8 +73,8 @@
   function stageHTML(ui) {
     var orbit = THUMBS.map(function (t, k) { return '<i style="--a:' + t[0] + ';--b:' + t[1] + ';transform:rotate(' + k * 60 + 'deg);transform-origin:50% 185%"></i>'; }).join("");
     var html =
-      '<div class="st-scene"><div class="room"><div class="shelf"><i></i><i></i><i></i></div><div class="lamp"></div><div class="plant"></div></div>' +
-      '<div class="fx fx-behind"><b>Watch</b></div><div class="person">' + PERSON + "</div></div>" +
+      '<div class="st-scene"><video class="lady" muted loop playsinline preload="none" poster="assets/media/lady.jpg" data-src="assets/media/lady.mp4"></video>' +
+      '<div class="fx fx-behind"><b>Watch</b></div><video class="lady-cut" muted loop playsinline preload="none" data-src="assets/media/lady-cut.webm"></video></div>' +
       '<div class="fx fx-grade"></div>' +
       '<div class="fx fx-glass"><div class="gw gw1"><small>Videos</small><b>36</b><small>this month</small></div>' +
       '<div class="gw gw2"><small>Top reel</small><b class="js-roll" data-to="197000">197K</b><div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:90%"></i><i style="height:75%"></i></div></div>' +
@@ -86,7 +86,7 @@
       '<div class="fx fx-spotlight"></div>' +
       '<div class="fx fx-check"><div class="check"><h4>Claude is editing your clip <em>live</em></h4><ul>' +
       "<li><span>Found the speaker</span><small>0.4s</small></li><li><span>Removed the pauses</span><small>1.2s</small></li><li><span>Put the title behind you</span><small>2.0s</small></li><li><span>Graded the colour</span><small>2.6s</small></li><li><span>Rendered in 4K</span><small>3.1s</small></li></ul></div></div>" +
-      '<div class="fx fx-doc"><div class="grain"></div><span class="doc-date">MUMBAI · 2026</span><div class="doc-lt"><b>Aarav Mehta</b>Founder, two years in</div><p class="doc-cap">“I almost quit the week it worked.”</p></div>' +
+      '<div class="fx fx-doc"><div class="grain"></div><span class="doc-date">MUMBAI · 2026</span><div class="doc-lt"><b>Riya Sharma</b>Podcast host, two years in</div><p class="doc-cap">“I almost quit the week it worked.”</p></div>' +
       '<div class="fx fx-caps"><div class="hook"><small>NEW</small><b>1 Prompt =</b><b class="y">Viral Edit 🔥</b></div><p class="caps"></p></div>';
     if (ui) {
       html += '<div class="reel-ui"><div class="bar"><i></i></div><span class="views"><i></i><b class="js-views">0</b> views</span>' +
