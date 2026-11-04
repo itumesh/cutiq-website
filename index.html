@@ -12,10 +12,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23141413'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23D97757' stroke-width='6'/%3E%3Cpath d='M32 10v12M32 42v12' stroke='%23F4EFE6' stroke-width='6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/showreel.css">
 <link rel="stylesheet" href="assets/css/hero.css">
+<link rel="stylesheet" href="assets/css/sections.css">
 <script>document.documentElement.classList.add('js')</script>
 <script src="config.js"></script>
 </head>
@@ -27,7 +28,7 @@
     <span>CutIQ</span>
   </a>
   <nav class="nav-links" aria-label="Sections">
-    <a href="#effects">Effects</a><a href="#before-after">Before / after</a><a href="#skills">Skills</a><a href="#pricing">Pricing</a>
+    <a href="#clients">Clients</a><a href="#how">How to use</a><a href="#effects">Effects</a><a href="#before-after">Before / after</a><a href="#skills">Skills</a><a href="#pricing">Pricing</a>
   </nav>
   <a class="btn btn-dark btn-sm" href="#pricing" data-cta="nav"><span>Get CutIQ</span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
 </header>
@@ -53,6 +54,66 @@
       <div class="nh-stat s1"><i>▲</i><div><b id="fsViews">+0</b><small>views</small></div></div>
       <div class="nh-stat s2"><i>♥</i><div><b id="fsLikes">0</b><small>likes</small></div></div>
       <div class="nh-badge"><span class="ok">✓</span><b>/effects</b> edited in one line</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cl" id="clients">
+  <div class="wrap cl-wrap">
+    <div class="cl-copy reveal">
+      <p class="eyebrow">Real client work</p>
+      <h2 class="big">Reels we shipped<br><em>for real clients.</em></h2>
+      <p class="cl-sub">Clinics, brands and creators. Client names are hidden. Every reel here was edited with CutIQ skills.</p>
+      <div class="cl-tags"><span>Before / after</span><span>3D teeth reveal</span><span>Glow frame</span><span>Name title</span></div>
+    </div>
+    <div class="cl-rail" id="clRail">
+      <figure class="cl-card">
+        <div class="cl-phone"><video data-src="assets/media/client-1.mp4" poster="assets/media/client-1.jpg" muted loop playsinline preload="none"></video></div>
+        <figcaption><span class="cl-badge"><i class="spark"></i>Edited by CutIQ skills</span><small>Dental clinic · smile makeover</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec ht" id="how">
+  <div class="wrap">
+    <div class="sec-head ht-head reveal">
+      <p class="eyebrow">How to use</p>
+      <h2 class="big">Edit in <em>4 easy steps.</em></h2>
+      <div class="ht-lang" role="tablist" aria-label="Language">
+        <button type="button" class="on" data-lang="en" role="tab" aria-selected="true">English</button>
+        <button type="button" data-lang="hi" role="tab" aria-selected="false">हिन्दी</button>
+      </div>
+    </div>
+    <ol class="ht-steps" id="htSteps">
+      <li class="reveal"><span class="n">1</span><div>
+        <b data-en="Buy and download" data-hi="खरीदें और डाउनलोड करें">Buy and download</b>
+        <p data-en="Pay ₹399 once. You instantly get one zip with all 399 skills and a step-by-step guide." data-hi="एक बार ₹399 दें। तुरंत एक zip फ़ाइल मिलेगी जिसमें सभी 399 skills और आसान गाइड है।">Pay ₹399 once. You instantly get one zip with all 399 skills and a step-by-step guide.</p></div></li>
+      <li class="reveal"><span class="n">2</span><div>
+        <b data-en="Add the skills to Claude" data-hi="Claude में skills जोड़ें">Add the skills to Claude</b>
+        <p data-en="Open Claude → Settings → Capabilities → Skills and upload the zip. Using Claude Code? Copy the folder into your skills folder. Takes about 2 minutes." data-hi="Claude खोलें → Settings → Capabilities → Skills में zip अपलोड करें। Claude Code चलाते हैं तो फ़ोल्डर को skills फ़ोल्डर में कॉपी करें। लगभग 2 मिनट लगते हैं।">Open Claude → Settings → Capabilities → Skills and upload the zip. Using Claude Code? Copy the folder into your skills folder. Takes about 2 minutes.</p></div></li>
+      <li class="reveal"><span class="n">3</span><div>
+        <b data-en="Give Claude your clip" data-hi="Claude को अपना वीडियो दें">Give Claude your clip</b>
+        <p data-en="Put your raw video in a folder and tell Claude what you want, in plain words." data-hi="अपना raw वीडियो एक फ़ोल्डर में रखें और Claude को सीधी भाषा में बताएं कि क्या चाहिए।">Put your raw video in a folder and tell Claude what you want, in plain words.</p>
+        <code data-en="&quot;Add glass widgets and captions to clip.mp4&quot;" data-hi="&quot;clip.mp4 में glass widgets और captions लगा दो&quot;">"Add glass widgets and captions to clip.mp4"</code></div></li>
+      <li class="reveal"><span class="n">4</span><div>
+        <b data-en="Get your edited reel" data-hi="एडिट किया हुआ reel पाएं">Get your edited reel</b>
+        <p data-en="Claude picks the right skill, edits on your own computer and saves the finished video next to the original. Want changes? Just ask." data-hi="Claude सही skill चुनता है, आपके कंप्यूटर पर ही एडिट करता है और तैयार वीडियो original के पास सेव कर देता है। बदलाव चाहिए? बस बोल दीजिए।">Claude picks the right skill, edits on your own computer and saves the finished video next to the original. Want changes? Just ask.</p></div></li>
+    </ol>
+    <p class="ht-need reveal" data-en="You need: a Claude plan that supports skills, a Windows or Mac computer, and FFmpeg (free, the guide shows how to install it)." data-hi="ज़रूरी: skills वाला Claude plan, Windows या Mac कंप्यूटर, और FFmpeg (फ्री है, गाइड में install करना बताया है)।">You need: a Claude plan that supports skills, a Windows or Mac computer, and FFmpeg (free, the guide shows how to install it).</p>
+  </div>
+</section>
+
+<section class="sec wh" id="who">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Who it's for</p><h2 class="big">Made for anyone<br><em>who posts video.</em></h2></div>
+    <div class="wh-grid">
+      <div class="wh-card reveal"><i>🎥</i><b>Creators</b><span>Reels and Shorts every day, without hours of editing.</span></div>
+      <div class="wh-card reveal"><i>✂️</i><b>Freelance editors</b><span>Deliver client work faster and take on more projects.</span></div>
+      <div class="wh-card reveal"><i>🏢</i><b>Agencies</b><span>One workflow for every brand you handle.</span></div>
+      <div class="wh-card reveal"><i>🏠</i><b>Real estate</b><span>Property tours, walkthroughs and plot reels.</span></div>
+      <div class="wh-card reveal"><i>🎓</i><b>Coaches &amp; educators</b><span>Talking-head lessons with captions and titles.</span></div>
+      <div class="wh-card reveal"><i>🦷</i><b>Clinics &amp; local business</b><span>Before / after reels that bring in enquiries.</span></div>
     </div>
   </div>
 </section>

@@ -256,3 +256,15 @@
   q(".js-off").forEach(function (e) { e.textContent = mrp > pr ? Math.round((1 - pr / mrp) * 100) : 0; });
   if (!(mrp > pr)) q(".mrp,.pc-offer").forEach(function (e) { e.style.display = "none"; });
 })();
+/* client reels: load + play only when on screen */
+(function () { var vs = Array.prototype.slice.call(document.querySelectorAll(".cl-phone video")); if (!vs.length) return;
+  var go = function (v, on) { if (on) { if (!v.getAttribute("src")) v.setAttribute("src", v.dataset.src); var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); };
+  if ("IntersectionObserver" in window) { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { go(e.target, e.isIntersecting); }); }, { rootMargin: "150px 0px" }); vs.forEach(function (v) { io.observe(v); }); } else vs.forEach(function (v) { go(v, true); });
+})();
+/* how to use: English / Hindi switch */
+(function () { var sec = document.getElementById("how"); if (!sec) return;
+  var bs = Array.prototype.slice.call(sec.querySelectorAll(".ht-lang button"));
+  function set(l) { bs.forEach(function (b) { var on = b.dataset.lang === l; b.classList.toggle("on", on); b.setAttribute("aria-selected", on); });
+    sec.classList.toggle("hi", l === "hi"); Array.prototype.forEach.call(sec.querySelectorAll("[data-en]"), function (e) { e.textContent = e.getAttribute("data-" + l); }); }
+  bs.forEach(function (b) { b.addEventListener("click", function () { set(b.dataset.lang); }); });
+})();

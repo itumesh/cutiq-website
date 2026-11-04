@@ -1,0 +1,50 @@
+/* ===== client reels ===== */
+.cl{background:#0f0e0d;color:#f4efe6;position:relative;overflow:hidden;isolation:isolate}
+.cl::before{content:"";position:absolute;z-index:-1;right:-10%;top:10%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(34,197,94,.16),transparent 70%)}
+.cl-wrap{display:grid;gap:34px;align-items:center}
+.cl-wrap>*{min-width:0}
+.cl .eyebrow{color:rgba(244,239,230,.6)}
+.cl h2 em{color:var(--clay)}
+.cl-sub{margin-top:16px;max-width:30em;color:rgba(244,239,230,.7);font-size:16px;line-height:1.6}
+.cl-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.cl-tags span{padding:7px 12px;border-radius:99px;border:1px solid rgba(244,239,230,.16);font:500 12px var(--mono);color:rgba(244,239,230,.75)}
+.cl-rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;justify-content:center;scrollbar-width:none}
+.cl-rail::-webkit-scrollbar{display:none}
+.cl-card{flex:none;width:min(74vw,300px);margin:0;scroll-snap-align:center}
+.cl-phone{position:relative;aspect-ratio:9/16;border-radius:30px;padding:5px;
+  background:linear-gradient(145deg,#cfcbc4,#5a5853 30%,#2a2928 60%,#8d8a85);box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 60px -20px rgba(34,197,94,.35)}
+.cl-phone video{width:100%;height:100%;object-fit:cover;border-radius:26px;display:block;background:#000}
+.cl-card figcaption{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:14px}
+.cl-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:99px;background:rgba(217,119,87,.16);border:1px solid rgba(217,119,87,.4);color:#ffd7c8;font:600 12px var(--sans)}
+.cl-badge .spark{margin:0;width:12px;height:12px}
+.cl-card small{font-size:12px;color:rgba(244,239,230,.55)}
+@media (min-width:900px){.cl-wrap{grid-template-columns:.9fr 1.1fr}.cl-rail{justify-content:flex-start}}
+
+/* ===== how to use ===== */
+.ht{background:var(--ivory)}
+.ht-head{display:flex;flex-direction:column;gap:6px}
+.ht-head h2 em{color:var(--clay)}
+.ht-lang{display:inline-flex;align-self:flex-start;margin-top:18px;padding:4px;border-radius:99px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px -16px rgba(20,20,19,.4)}
+.ht-lang button{padding:9px 18px;border:0;border-radius:99px;background:none;font:600 14px var(--sans);color:var(--muted);cursor:pointer;transition:background .25s,color .25s}
+.ht-lang button[data-lang="hi"]{font-family:"Noto Sans Devanagari",var(--sans)}
+.ht-lang button.on{background:var(--ink);color:#fff}
+.ht-steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:none}
+.ht-steps li{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.ht-steps .n{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--clay);color:#fff;font:700 18px var(--sans)}
+.ht-steps b{display:block;font-size:18px;letter-spacing:-.01em;margin-bottom:6px}
+.ht-steps p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.ht-steps code{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:10px;background:#141413;color:#ffb35c;font:500 13px var(--mono);white-space:normal}
+.ht-need{margin-top:18px;padding:14px 18px;border-radius:16px;background:rgba(217,119,87,.1);border:1px solid rgba(217,119,87,.28);font-size:14px;line-height:1.55;color:var(--ink)}
+.ht.hi .ht-steps b,.ht.hi .ht-steps p,.ht.hi .ht-need,.ht.hi .ht-steps code{font-family:"Noto Sans Devanagari",var(--sans)}
+@media (min-width:900px){.ht-steps{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== who it's for ===== */
+.wh{background:#fbf8f2}
+.wh h2 em{color:var(--clay)}
+.wh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.wh-card{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:20px;background:#fff;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+.wh-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(20,20,19,.35)}
+.wh-card i{font-style:normal;font-size:24px;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--clay-soft)}
+.wh-card b{font-size:16px;margin-top:6px}
+.wh-card span{font-size:13.5px;line-height:1.5;color:var(--muted)}
+@media (min-width:900px){.wh-grid{grid-template-columns:repeat(3,1fr);gap:16px}.wh-card{padding:24px}}
