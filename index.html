@@ -27,7 +27,7 @@
     <span>CutIQ</span>
   </a>
   <nav class="nav-links" aria-label="Sections">
-    <a href="#effects">Effects</a><a href="#showreel">Showreel</a><a href="#edit">How it edits</a><a href="#before-after">Before / after</a><a href="#skills">Skills</a><a href="#pricing">Pricing</a>
+    <a href="#effects">Effects</a><a href="#before-after">Before / after</a><a href="#skills">Skills</a><a href="#pricing">Pricing</a>
   </nav>
   <a class="btn btn-dark btn-sm" href="#pricing" data-cta="nav"><span>Get CutIQ</span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
 </header>
@@ -66,45 +66,6 @@
   </div>
 </section>
 
-<section class="sec sec-dark" id="showreel">
-  <div class="wrap sr-wrap">
-    <div class="sr-copy reveal">
-      <p class="eyebrow light">One clip · seven skills</p>
-      <h2 class="big">Type a command.<br><em>Get a scroll-stopper.</em></h2>
-      <p>This is how CutIQ works inside Claude. One raw clip, one command at a time, and Claude builds each edit: schematic outlines, AI B-roll, phone mockups, glass widgets, editor overlays and a pull-back reveal. Tap any command to play it.</p>
-      <div class="sr-list" id="srList"></div>
-    </div>
-    <div class="sr-phone"><div class="phone"><div class="sr" id="sr"></div></div></div>
-  </div>
-</section>
-
-<section class="sec sec-dark" id="edit">
-  <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow light">Type a skill. Watch the edit.</p><h2 class="big">One clip.<br><em>Any edit you name.</em></h2>
-      <p>Pick an effect below or watch it cycle. CutIQ tells Claude exactly how to build each look, then Claude renders it on your own computer.</p></div>
-    <div class="forge">
-      <div>
-        <div class="term">
-          <div class="term-top"><span><i></i><i></i><i></i></span>Claude · CutIQ skills<b></b></div>
-          <div class="term-body">
-            <div class="t-user"><span id="tCmd"></span><i class="caret"></i></div>
-            <div class="t-bot">
-              <div class="t-row" data-r="0"><i></i><span id="tR0">Loading skill…</span></div>
-              <div class="t-row" data-r="1"><i></i><span>Found the speaker, cut out the background</span></div>
-              <div class="t-row" data-r="2"><i></i><span>Built the effect, synced to the voice</span></div>
-              <div class="t-row" data-r="3"><i></i><span>Graded and rendered in 4K</span></div>
-              <div class="t-prog"><i id="tProg"></i></div>
-              <div class="t-row ok" data-r="4"><i></i><span id="tDone">Done · clip_edited.mp4</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="chips" id="fxChips"></div>
-      </div>
-      <div class="phone-col"><div class="phone"><div class="stage" id="forgeStage" data-fx="" data-ui="1"></div></div></div>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="before-after">
   <div class="wrap ba-wrap">
     <div class="ba reveal" id="ba">
@@ -133,34 +94,6 @@
   <div class="num reveal"><b>19</b><span>Disciplines</span></div>
   <div class="num reveal"><b>1</b><span>Sentence to start</span></div>
   <div class="num reveal"><b>₹<span class="js-price">399</span></b><span>Once. Forever.</span></div>
-</section>
-
-<section class="sec" id="capabilities">
-  <div class="wrap">
-    <div class="sec-head reveal"><p class="eyebrow">Everything an edit needs</p><h2 class="big">One library.<br><em>Every craft.</em></h2></div>
-    <div class="bento">
-      <article class="tile t-wide reveal">
-        <div class="tile-copy"><h3>Cuts that hit the beat.</h3><p>Beats detected, clips cut on the downbeat, speed ramps on the drop.</p></div>
-        <div class="beats" id="beats"></div>
-      </article>
-      <article class="tile reveal">
-        <div class="tile-copy"><h3>Captions, word by word.</h3><p>Transcribed offline. Highlighted as spoken.</p></div>
-        <p class="t-cap" id="tCap"></p>
-      </article>
-      <article class="tile reveal">
-        <div class="tile-copy"><h3>Broadcast-ready sound.</h3><p>Noise removed, voices lifted, mastered to −14 LUFS.</p></div>
-        <div class="meter"><i id="meterFill"></i><span>−14.0 LUFS</span></div>
-      </article>
-      <article class="tile t-tall reveal">
-        <div class="tile-copy"><h3>Any frame, any screen.</h3><p>One landscape shot, reframed for every platform. The crop follows her face.</p></div>
-        <div class="reframe rf2"><div class="rf-src"><video class="rf-vid" src="assets/media/lady-land.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video><span class="rf-box" id="rfBox"><em id="rfLabel">9:16</em><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></span><span class="rf-track"><b></b>Face tracked</span></div><div class="rf-chips" id="rfChips"><button type="button" class="on" data-r="9:16">9:16 Reels</button><button type="button" data-r="1:1">1:1 Feed</button><button type="button" data-r="4:5">4:5 Post</button><button type="button" data-r="16:9">16:9 YouTube</button></div></div>
-      </article>
-      <article class="tile t-wide reveal">
-        <div class="tile-copy"><h3>Cinema colour, one line.</h3><p>Flat, washed-out footage becomes a film look. Drag the line, or pick a grade.</p></div>
-        <div class="cmp cmp2" id="cmp"><video class="cg-v raw" src="assets/media/lady.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cmp-after"><video class="cg-v graded" data-grade="warm" src="assets/media/lady.mp4" poster="assets/media/lady.jpg" muted loop playsinline autoplay preload="metadata"></video></div><span class="cmp-h"></span><span class="cmp-tag l">RAW · LOG</span><span class="cmp-tag r" id="cgName">BOLLYWOOD WARM</span><input type="range" id="cmpRange" min="0" max="100" value="50" aria-label="Compare raw and graded"><div class="cg-chips" id="cgChips"><button type="button" class="on" data-g="warm" data-n="BOLLYWOOD WARM">Bollywood Warm</button><button type="button" data-g="teal" data-n="TEAL &amp; ORANGE">Teal &amp; Orange</button><button type="button" data-g="night" data-n="MUMBAI NIGHT">Mumbai Night</button><button type="button" data-g="film" data-n="VINTAGE FILM">Vintage Film</button></div></div>
-      </article>
-    </div>
-  </div>
 </section>
 
 <section class="sec sec-cream" id="skills">
