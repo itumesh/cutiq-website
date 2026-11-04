@@ -4,6 +4,7 @@
 window.CUTIQ_CONFIG = {
   brand: "CutIQ",
   price: 399,                       // selling price in INR
+  mrp: 999,                         // normal price shown struck-through (keep it a real price you sell at)
   currency: "₹",
 
   // Payment page (Razorpay / Instamojo / Cosmofeed / Gumroad link). Leave "" to send buyers to WhatsApp instead.

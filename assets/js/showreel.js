@@ -250,3 +250,9 @@
 /* hero chips follow the effect playing in the reel (6 effects across ~22.7 s) */
 (function () { var v = document.getElementById("heroVideo"), c = Array.prototype.slice.call(document.querySelectorAll("#nhChips span"));
   if (v && c.length) setInterval(function () { var k = Math.min(5, Math.floor((v.currentTime || 0) / 3.5)); c.forEach(function (e, i) { e.classList.toggle("on", i === k); }); }, 300); })();
+/* launch offer: struck-through normal price + % off, both from config.js */
+(function () { var C = window.CUTIQ_CONFIG || {}, mrp = +C.mrp || 0, pr = +C.price || 399, q = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  q(".js-mrp").forEach(function (e) { e.textContent = mrp; });
+  q(".js-off").forEach(function (e) { e.textContent = mrp > pr ? Math.round((1 - pr / mrp) * 100) : 0; });
+  if (!(mrp > pr)) q(".mrp,.pc-offer").forEach(function (e) { e.style.display = "none"; });
+})();

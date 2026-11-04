@@ -64,3 +64,23 @@
   .nh-copy{text-align:left}.nh-sub{margin-left:0}.nh-chips{justify-content:flex-start}.nh-cta{align-items:flex-start}
 }
 .nh-btn b{font-weight:inherit}
+
+/* ===== launch offer pricing ===== */
+.mrp{text-decoration:none;position:relative;display:inline-block;margin-right:.35em;opacity:.62;font-weight:500}
+.mrp::after{content:"";position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:currentColor;transform:rotate(-8deg);border-radius:2px}
+.mrp .js-mrp{font-size:inherit;color:inherit}
+.num .mrp{display:block;margin:0 auto 4px;font-size:18px;color:var(--muted)}
+.pc-offer{display:flex;align-items:center;gap:10px;margin:18px 0 6px;font-size:13px;color:rgba(244,239,230,.75)}
+.pc-offer .off{padding:5px 10px;border-radius:99px;background:#22c55e;color:#fff;font-weight:800;letter-spacing:.02em}
+.pcard-price .mrp.big{align-self:center;font-size:30px;margin-right:12px;color:rgba(244,239,230,.6)}
+.mbar .mb-price{display:flex;flex-direction:column;align-items:center;line-height:1}
+.mbar .mb-price .mrp{font-size:12px;margin:0 0 3px;opacity:.8;color:#fff}
+.nh-btn .mrp{opacity:.55}
+/* glass widgets: keep the face (upper centre) clear, widgets sit on the sides and lower half */
+.gw1{left:4%;top:46%;width:30%}.gw2{right:4%;top:44%;width:34%}
+.gw3{right:6%;top:66%;width:22%}.gw4{left:4%;top:68%;width:28%}
+.gw{padding:6% 6%}.gw b{font-size:9cqw}.gw4 b{font-size:7cqw}
+.num b .js-price,.num .mrp .js-mrp{display:inline!important;font:inherit!important;color:inherit!important;margin:0!important;letter-spacing:inherit}
+.num .mrp{display:block!important;font-size:18px!important;line-height:1.2;margin:0 auto 6px!important;color:var(--muted)}
+.mbar .mb-now,.mbar .mb-now .js-price{font-size:22px;font-weight:800;color:#fff}
+.num .mrp{display:inline-block!important}
