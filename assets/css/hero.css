@@ -84,3 +84,5 @@
 .num .mrp{display:block!important;font-size:18px!important;line-height:1.2;margin:0 auto 6px!important;color:var(--muted)}
 .mbar .mb-now,.mbar .mb-now .js-price{font-size:22px;font-weight:800;color:#fff}
 .num .mrp{display:inline-block!important}
+.brand-mark{width:auto;height:28px;aspect-ratio:580/670;flex:none;overflow:visible}
+.foot .brand-mark{height:30px}
