@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/showreel.css">
+<link rel="stylesheet" href="assets/css/hero.css">
 <script>document.documentElement.classList.add('js')</script>
 <script src="config.js"></script>
 </head>
@@ -33,35 +34,25 @@
 
 <main id="top">
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow fade" style="--d:.05s"><span class="live"></span>399 video editing skills for Claude</p>
-      <h1 class="hero-title" aria-label="Videos people stop scrolling for.">
-        <span class="line"><span class="split">Videos people</span></span>
-        <span class="line"><em class="split">stop scrolling for.</em></span>
-      </h1>
-      <p class="hero-sub fade" style="--d:.7s">Install CutIQ in Claude, type one line, and your raw clip comes back edited: glass widgets, orbit carousels, episode timelines, split hooks, glowing titles behind you and live checklists. The reel here is one real clip, edited six ways. No timeline, no editing software.</p>
-      <p class="skill-note fade" style="--d:.78s"><i class="spark"></i><span><b>Every edit on this page is a Claude skill.</b> Type <code>/glass-widgets</code> or <code>/pull-back-reveal</code> in Claude and it edits your clip for you.</span></p>
-      <div class="hero-cta fade" style="--d:.85s">
-        <a class="btn btn-dark btn-lg" href="#pricing" data-cta="hero"><span>Get all 399 skills · ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
-        <a class="btn btn-line btn-lg" href="#showreel"><i class="play"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z"/></svg></i><span>Watch 1 clip get 7 edits</span></a>
-      </div>
-      <div class="hero-proof fade" style="--d:1s">
-        <div><b>399</b><span>ready skills</span></div>
-        <div><b>1 line</b><span>to start an edit</span></div>
-        <div><b>₹<span class="js-price">399</span></b><span>one-time, lifetime</span></div>
-      </div>
+<section class="hero nh">
+  <div class="nh-grid">
+    <div class="nh-copy">
+      <span class="nh-kick"><i></i>399 video editing skills for Claude</span>
+      <h1 class="nh-title">One clip.<br><em>Six edits.</em> Zero timeline.</h1>
+      <p class="nh-sub">Type one command in Claude and your raw video comes back as a finished reel.</p>
+      <div class="nh-chips" id="nhChips"><span class="on">/glass-widgets</span><span>/orbit</span><span>/timeline</span><span>/split-hook</span><span>/spotlight</span><span>/checklist</span></div>
+      <div class="nh-cta"><a class="nh-btn" href="#pricing" data-pay data-cta="hero"><span>Get all 399 skills · ₹<b class="js-price">399</b></span><i>→</i></a><span class="nh-fine">One-time payment · lifetime access</span></div>
     </div>
-    <div class="hero-phone fade" style="--d:.4s">
-      <div class="float-stat fs1"><i>▲</i><div><b id="fsViews">+0</b><small>views this hour</small></div></div>
-      <div class="float-stat fs2"><i>♥</i><div><b id="fsLikes">0</b><small>likes</small></div></div>
-      <div class="float-stat fs3"><i>↗</i><div><b id="fsShares">0</b><small>shares</small></div></div>
-      <div class="phone"><div class="hero-video">
-        <video id="heroVideo" src="assets/media/hero-reel.mp4" poster="assets/media/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="One clip edited six ways with CutIQ skills"></video>
-        <button type="button" class="hv-sound" id="heroSound" aria-label="Turn sound on"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="off" d="M17 9l5 6M22 9l-5 6"/><path class="on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>Sound</span></button>
-      </div></div>
-      <div class="hero-badge"><i class="spark"></i>Edited by Claude with <code>CutIQ</code> skills</div>
+    <div class="nh-stage">
+      <span class="nh-ring"></span><span class="nh-ring r2"></span>
+      <div class="nh-phone"><span class="nh-btns"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></span>
+        <div class="nh-scr"><i class="nh-island"></i>
+          <video id="heroVideo" src="assets/media/hero-reel.mp4" poster="assets/media/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="One clip edited six ways with CutIQ skills"></video>
+          <button type="button" class="hv-sound" id="heroSound" aria-label="Turn sound on"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="off" d="M17 9l5 6M22 9l-5 6"/><path class="on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><span>Sound</span></button>
+          <i class="nh-home"></i></div></div>
+      <div class="nh-stat s1"><i>▲</i><div><b id="fsViews">+0</b><small>views</small></div></div>
+      <div class="nh-stat s2"><i>♥</i><div><b id="fsLikes">0</b><small>likes</small></div></div>
+      <div class="nh-badge"><span class="ok">✓</span><b>/effects</b> edited in one line</div>
     </div>
   </div>
 </section>

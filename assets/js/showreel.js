@@ -247,3 +247,6 @@
 })();
 (function () { var b = document.getElementById("exGo"), i = document.getElementById("exSearch");
   if (b && i) b.addEventListener("click", function () { i.focus(); i.dispatchEvent(new Event("input", { bubbles: true })); }); })();
+/* hero chips follow the effect playing in the reel (6 effects across ~22.7 s) */
+(function () { var v = document.getElementById("heroVideo"), c = Array.prototype.slice.call(document.querySelectorAll("#nhChips span"));
+  if (v && c.length) setInterval(function () { var k = Math.min(5, Math.floor((v.currentTime || 0) / 3.5)); c.forEach(function (e, i) { e.classList.toggle("on", i === k); }); }, 300); })();
