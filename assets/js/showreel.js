@@ -156,3 +156,16 @@
   if (pay && cta) { cta.href = pay.getAttribute("href"); if (pay.target) { cta.target = pay.target; cta.rel = "noopener"; } }
   $$(".js-price", sr).forEach(function (e) { e.textContent = (window.CUTIQ_CONFIG || {}).price || 399; });
 })();
+/* hero video: sound toggle + keep playing when visible */
+(function () {
+  var v = document.getElementById("heroVideo"), b = document.getElementById("heroSound");
+  if (!v) return;
+  var tryPlay = function () { var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+  tryPlay();
+  if (b) b.addEventListener("click", function () {
+    v.muted = !v.muted; if (!v.muted) { v.volume = 0.9; tryPlay(); }
+    b.classList.toggle("is-on", !v.muted); b.setAttribute("aria-label", v.muted ? "Turn sound on" : "Turn sound off");
+    b.querySelector("span").textContent = v.muted ? "Sound" : "Mute";
+  });
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) tryPlay(); else v.pause(); }); }, { threshold: 0.2 }).observe(v);
+})();
