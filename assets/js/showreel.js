@@ -258,7 +258,7 @@
 })();
 /* client reels: load + play only when on screen */
 (function () { var vs = Array.prototype.slice.call(document.querySelectorAll(".cl-phone video")); if (!vs.length) return;
-  var go = function (v, on) { if (on) { if (!v.getAttribute("src")) v.setAttribute("src", v.dataset.src); var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); };
+  var go = function (v, on) { if (on) { if (!v.getAttribute("src") && v.dataset.src) v.setAttribute("src", v.dataset.src); var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); };
   if ("IntersectionObserver" in window) { var io = new IntersectionObserver(function (es) { es.forEach(function (e) { go(e.target, e.isIntersecting); }); }, { rootMargin: "150px 0px" }); vs.forEach(function (v) { io.observe(v); }); } else vs.forEach(function (v) { go(v, true); });
 })();
 /* how to use: English / Hindi switch */
