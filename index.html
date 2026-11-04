@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CutIQ — Videos people stop scrolling for</title>
+<meta name="description" content="399 professional video editing skills for Claude. Motion graphics, documentary cuts, colour, captions and kinetic type — directed in plain English. One-time ₹399.">
+<meta property="og:title" content="CutIQ — Studio-grade video editing, inside Claude">
+<meta property="og:description" content="399 professional editing skills for Claude. Ask for the edit. Get the cut.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4EFE6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23141413'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23D97757' stroke-width='6'/%3E%3Cpath d='M32 10v12M32 42v12' stroke='%23F4EFE6' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/showreel.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="config.js"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="CutIQ home">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M16 3v7M16 22v7" stroke="#D97757" stroke-width="3.2" stroke-linecap="round"/></svg>
+    <span>CutIQ</span>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#showreel">Showreel</a><a href="#edit">How it edits</a><a href="#before-after">Before / after</a><a href="#effects">Effects</a><a href="#skills">Skills</a><a href="#pricing">Pricing</a>
+  </nav>
+  <a class="btn btn-dark btn-sm" href="#pricing" data-cta="nav"><span>Get CutIQ</span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow fade" style="--d:.05s"><span class="live"></span>399 video editing skills for Claude</p>
+      <h1 class="hero-title" aria-label="Videos people stop scrolling for.">
+        <span class="line"><span class="split">Videos people</span></span>
+        <span class="line"><em class="split">stop scrolling for.</em></span>
+      </h1>
+      <p class="hero-sub fade" style="--d:.7s">Install CutIQ in Claude, type one line, and your raw clip comes back edited: captions, glass widgets, spotlight titles, documentary looks, beat cuts and colour. No timeline, no editing software.</p>
+      <p class="skill-note fade" style="--d:.78s"><i class="spark"></i><span><b>Every edit on this page is a Claude skill.</b> Type <code>/xray-scan</code> or <code>/glass-widgets</code> in Claude and it edits your clip for you.</span></p>
+      <div class="hero-cta fade" style="--d:.85s">
+        <a class="btn btn-dark btn-lg" href="#pricing" data-cta="hero"><span>Get all 399 skills · ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
+        <a class="btn btn-line btn-lg" href="#showreel"><i class="play"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z"/></svg></i><span>Watch 1 clip get 8 edits</span></a>
+      </div>
+      <div class="hero-proof fade" style="--d:1s">
+        <div><b>399</b><span>ready skills</span></div>
+        <div><b>1 line</b><span>to start an edit</span></div>
+        <div><b>₹<span class="js-price">399</span></b><span>one-time, lifetime</span></div>
+      </div>
+    </div>
+    <div class="hero-phone fade" style="--d:.4s">
+      <div class="float-stat fs1"><i>▲</i><div><b id="fsViews">+0</b><small>views this hour</small></div></div>
+      <div class="float-stat fs2"><i>♥</i><div><b id="fsLikes">0</b><small>likes</small></div></div>
+      <div class="float-stat fs3"><i>↗</i><div><b id="fsShares">0</b><small>shares</small></div></div>
+      <div class="phone"><div class="stage" id="heroStage" data-fx="captions grade" data-ui="1"></div></div>
+      <div class="hero-badge"><i class="spark"></i>Edited by Claude with <code>CutIQ</code> skills</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="showreel">
+  <div class="wrap sr-wrap">
+    <div class="sr-copy reveal">
+      <p class="eyebrow light">One clip · eight skills</p>
+      <h2 class="big">Type a command.<br><em>Get a scroll-stopper.</em></h2>
+      <p>This is how CutIQ works inside Claude. One raw clip, one command at a time, and Claude builds each edit: x-ray hooks, schematic outlines, AI B-roll, phone mockups, glass widgets, editor overlays and a pull-back reveal. Tap any command to play it.</p>
+      <div class="sr-list" id="srList"></div>
+    </div>
+    <div class="sr-phone"><div class="phone"><div class="sr" id="sr"></div></div></div>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="edit">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow light">Type a skill. Watch the edit.</p><h2 class="big">One clip.<br><em>Any edit you name.</em></h2>
+      <p>Pick an effect below or watch it cycle. CutIQ tells Claude exactly how to build each look, then Claude renders it on your own computer.</p></div>
+    <div class="forge">
+      <div>
+        <div class="term">
+          <div class="term-top"><span><i></i><i></i><i></i></span>Claude · CutIQ skills<b></b></div>
+          <div class="term-body">
+            <div class="t-user"><span id="tCmd"></span><i class="caret"></i></div>
+            <div class="t-bot">
+              <div class="t-row" data-r="0"><i></i><span id="tR0">Loading skill…</span></div>
+              <div class="t-row" data-r="1"><i></i><span>Found the speaker, cut out the background</span></div>
+              <div class="t-row" data-r="2"><i></i><span>Built the effect, synced to the voice</span></div>
+              <div class="t-row" data-r="3"><i></i><span>Graded and rendered in 4K</span></div>
+              <div class="t-prog"><i id="tProg"></i></div>
+              <div class="t-row ok" data-r="4"><i></i><span id="tDone">Done · clip_edited.mp4</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="chips" id="fxChips"></div>
+      </div>
+      <div class="phone-col"><div class="phone"><div class="stage" id="forgeStage" data-fx="" data-ui="1"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="before-after">
+  <div class="wrap ba-wrap">
+    <div class="ba reveal" id="ba">
+      <div class="stage" id="baRaw" data-look="raw" data-fx=""></div>
+      <div class="ba-after"><div class="stage" id="baEdit" data-fx="grade captions"></div></div>
+      <span class="ba-line"></span><span class="ba-tag l">RAW</span><span class="ba-tag r">EDITED</span>
+      <input type="range" id="baRange" min="0" max="100" value="50" aria-label="Drag to compare raw and edited">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Raw vs edited</p>
+      <h2 class="big">Same clip.<br><em>Drag to compare.</em></h2>
+      <div class="ba-tabs" id="baTabs">
+        <button type="button" class="on" data-fx="grade captions"><b>Colour + captions</b><span>Flat phone footage becomes a graded, captioned reel.</span></button>
+        <button type="button" data-fx="spotlight"><b>Spotlight title</b><span>A glowing title sits behind the speaker.</span></button>
+        <button type="button" data-fx="documentary"><b>Documentary look</b><span>Black and white, grain, letterbox and a name strip.</span></button>
+        <button type="button" data-fx="glass"><b>Glass widgets</b><span>Stats float around the speaker like an app UI.</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark" id="effects">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow light">The effects</p><h2 class="big">1 clip.<br><em>8 edits.</em></h2></div>
+    <div class="gallery" id="gallery"></div>
+    <div class="gallery-cta reveal"><p>Plus 391 more skills, from beat cuts to 4K export.</p>
+      <a class="btn btn-clay btn-lg" href="#pricing" data-cta="effects"><span>Get every effect · ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a></div>
+  </div>
+</section>
+
+<section class="numbers wrap">
+  <div class="num reveal"><b>399</b><span>Professional skills</span></div>
+  <div class="num reveal"><b>19</b><span>Disciplines</span></div>
+  <div class="num reveal"><b>1</b><span>Sentence to start</span></div>
+  <div class="num reveal"><b>₹<span class="js-price">399</span></b><span>Once. Forever.</span></div>
+</section>
+
+<section class="sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Everything an edit needs</p><h2 class="big">One library.<br><em>Every craft.</em></h2></div>
+    <div class="bento">
+      <article class="tile t-wide reveal">
+        <div class="tile-copy"><h3>Cuts that hit the beat.</h3><p>Beats detected, clips cut on the downbeat, speed ramps on the drop.</p></div>
+        <div class="beats" id="beats"></div>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-copy"><h3>Captions, word by word.</h3><p>Transcribed offline. Highlighted as spoken.</p></div>
+        <p class="t-cap" id="tCap"></p>
+      </article>
+      <article class="tile reveal">
+        <div class="tile-copy"><h3>Broadcast-ready sound.</h3><p>Noise removed, voices lifted, mastered to −14 LUFS.</p></div>
+        <div class="meter"><i id="meterFill"></i><span>−14.0 LUFS</span></div>
+      </article>
+      <article class="tile t-tall reveal">
+        <div class="tile-copy"><h3>Any frame, any screen.</h3><p>16:9, 9:16, 1:1 and 4:5 — reframed around the subject.</p></div>
+        <div class="reframe"><div class="rf-src"><div class="stage" data-fx="grade"></div><span class="rf-box"></span></div></div>
+      </article>
+      <article class="tile t-wide reveal">
+        <div class="tile-copy"><h3>Cinema colour, one line.</h3><p>Flat phone footage gets a warm, film-style grade. Drag to compare.</p></div>
+        <div class="cmp" id="cmp"><div class="stage" data-look="raw" data-fx=""></div><div class="cmp-after"><div class="stage" data-fx="grade"></div></div><span class="cmp-h"></span><span class="cmp-tag l">RAW</span><span class="cmp-tag r">BOLLYWOOD WARM</span><input type="range" id="cmpRange" min="0" max="100" value="50" aria-label="Compare raw and graded"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-cream" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">The library</p><h2 class="big"><span class="js-total">399</span> skills.<br><em>Search them all.</em></h2></div>
+    <div class="explorer reveal">
+      <div class="ex-bar">
+        <label class="ex-search"><svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input id="exSearch" type="search" placeholder="Search skills — e.g. captions, grade, stabilise" autocomplete="off"></label>
+        <span class="ex-count" id="exCount"></span>
+      </div>
+      <div class="ex-chips" id="exChips"></div>
+      <ul class="ex-list" id="exList"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="earn">
+  <div class="wrap earn">
+    <div class="reveal">
+      <p class="eyebrow">For yourself — or for clients</p>
+      <h2 class="big">Turn hours of editing<br><em>into minutes.</em></h2>
+      <p class="lead">Creators, brands, real-estate teams, weddings and podcasts all need video every week. Deliver faster, take on more work — and decide what your time is worth.</p>
+    </div>
+    <div class="calc reveal">
+      <h3>Estimate your monthly potential</h3>
+      <label><span>Videos per month</span><b id="vOut">20</b><input type="range" id="vIn" min="5" max="150" step="5"></label>
+      <label><span>Your rate per video</span><b id="rOut">₹1,500</b><input type="range" id="rIn" min="300" max="10000" step="100"></label>
+      <div class="calc-out"><span>Potential monthly revenue</span><b id="mOut">₹30,000</b></div>
+      <p class="fine">Illustrative only — not a promise of income. Results depend on your clients, effort and quality.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark pricing" id="pricing">
+  <div class="wrap pr-grid">
+    <div class="reveal">
+      <p class="eyebrow light">Pricing</p>
+      <h2 class="big">Everything.<br><em>One price.</em></h2>
+      <p class="lead light">No subscription. No tiers. The complete CutIQ library and every future update.</p>
+    </div>
+    <div class="pcard reveal">
+      <div class="pcard-top"><span>CutIQ Complete</span><em>Lifetime</em></div>
+      <div class="pcard-price"><span>₹</span><b class="js-price">399</b><small>one-time</small></div>
+      <ul>
+        <li>All 399 editing skills across 19 disciplines</li>
+        <li>Claude Desktop, Claude Code &amp; Claude.ai ready</li>
+        <li>Step-by-step install guide (English &amp; Hindi)</li>
+        <li>Ready-to-use prompt library</li>
+        <li>Every recipe tested on real media</li>
+        <li>Free updates</li>
+      </ul>
+      <a class="btn btn-clay btn-lg full" href="#" data-pay data-cta="pricing"><span>Get CutIQ — ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
+      <p class="pcard-note">Secure checkout · Instant download</p>
+      <p class="pcard-note js-refund" hidden></p>
+      <a class="pcard-wa js-wa" href="#" hidden target="_blank" rel="noopener">Questions? Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Questions</p><h2 class="big">Asked <em>&amp; answered.</em></h2></div>
+    <div class="faq">
+      <details class="reveal"><summary>Do I need to know video editing?</summary><p>No. You describe the result you want — “turn these clips into a 30-second beat-synced reel with captions” — and Claude chooses the right skills and runs them. Professionals use it to delegate the repetitive work.</p></details>
+      <details class="reveal"><summary>What do I need to run it?</summary><p>A Windows or Mac computer, a paid Claude plan (best with Claude Desktop or Claude Code), and two free tools — FFmpeg and Python. The guide walks you through setup in about five minutes.</p></details>
+      <details class="reveal"><summary>What exactly do I receive?</summary><p>An instant download with all 399 skills, category packs, the install guide, a prompt library and a searchable catalogue.</p></details>
+      <details class="reveal"><summary>Can I use it for client work?</summary><p>Yes — edit for yourself and for paying clients. Reselling or sharing the skill files is not permitted.</p></details>
+      <details class="reveal"><summary>Does it work on a phone?</summary><p>Editing runs on a computer, where Claude can process your media. The finished videos go anywhere.</p></details>
+      <details class="reveal"><summary>Is CutIQ made by Anthropic?</summary><p>No. CutIQ is an independent product built to work with Claude. Claude is a trademark of Anthropic.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final dark">
+  <div class="wrap center">
+    <h2 class="huge reveal">Stop editing.<br><em>Start directing.</em></h2>
+    <a class="btn btn-clay btn-lg reveal" href="#pricing" data-cta="final"><span>Get CutIQ — ₹<b class="js-price">399</b></span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="3.2"/><path d="M16 3v7M16 22v7" stroke="#D97757" stroke-width="3.2" stroke-linecap="round"/></svg><span>CutIQ</span></a>
+    <nav class="foot-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms &amp; Refunds</a><a class="js-mail" href="#" hidden>Contact</a></nav>
+  </div>
+  <p class="wrap disclaimer">CutIQ is an independent product and is not affiliated with, endorsed or sponsored by Anthropic. Claude is a trademark of Anthropic, PBC. Visuals on this page are illustrative demonstrations. © <span id="yr">2026</span> CutIQ.</p>
+</footer>
+
+<div class="mbar" id="mbar"><div><b>CutIQ Complete</b><span>399 skills · ₹<span class="js-price">399</span> once</span></div><a class="btn btn-dark btn-sm" href="#pricing" data-cta="sticky"><span>Get it</span><i class="btn-ico"><svg viewBox="0 0 16 16"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"/></svg></i></a></div>
+
+<script src="assets/js/skills-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/showreel.js" defer></script>
+</body>
+</html>
