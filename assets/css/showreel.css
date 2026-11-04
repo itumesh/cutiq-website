@@ -439,3 +439,29 @@
 .tile .cmp2{left:28px;right:28px;top:150px;bottom:28px;width:auto;height:auto}
 @media (max-width:560px){.tile .cmp2{left:16px;right:16px;top:150px;bottom:16px;height:auto}.tile:has(.cmp2){min-height:560px}}
 .sr-bp .big,.sr-bp .bp-title,.sr-bp .co{display:none}
+
+/* ===== tighter rhythm between sections ===== */
+.sec{padding:clamp(60px,7vw,104px) 0}
+.sec-head{margin-bottom:clamp(28px,4vw,48px)}
+.final{padding:clamp(80px,10vw,140px) 0}
+.numbers{margin-block:0}
+@media (max-width:560px){.sec{padding:52px 0}.hero{padding-bottom:40px}}
+
+/* ===== search box ===== */
+.ex-search{height:62px;padding:0 7px 0 8px;gap:10px;border-radius:18px;background:#fff;border:1.5px solid transparent;
+  background-image:linear-gradient(#fff,#fff),linear-gradient(120deg,#e8865f,#d97757 50%,#ffb35c);background-origin:border-box;background-clip:padding-box,border-box;
+  box-shadow:0 14px 34px -18px rgba(217,119,87,.6)}
+.ex-search:focus-within{box-shadow:0 0 0 5px rgba(217,119,87,.16),0 14px 34px -18px rgba(217,119,87,.7)}
+.ex-ico{flex:none;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:var(--clay-soft)}
+.ex-ico svg{stroke:var(--clay)!important;width:19px!important;height:19px!important;stroke-width:2.2!important}
+.ex-search input{font-size:15.5px;font-weight:500}
+.ex-search input::placeholder{color:#9a948a;font-weight:400}
+.ex-go{flex:none;height:48px;padding:0 20px;border:0;border-radius:13px;background:#141413;color:#fff;font:600 14px var(--sans);cursor:pointer;transition:background .25s,transform .2s}
+.ex-go:hover{background:var(--clay)}.ex-go:active{transform:scale(.97)}
+@media (max-width:560px){.ex-go{padding:0 14px}.ex-search input{font-size:14px}}
+
+/* ===== framing tile: always tall, real 16:9 source ===== */
+.tile:has(.rf2){grid-row:span 2}
+.rf2{position:absolute;left:28px;right:28px;top:150px;bottom:28px;justify-content:center}
+.rf2 .rf-src{flex:none;width:100%;aspect-ratio:16/9;height:auto}
+@media (max-width:560px){.rf2{left:16px;right:16px;top:140px;bottom:20px}}

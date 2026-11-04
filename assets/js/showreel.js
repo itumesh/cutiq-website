@@ -245,3 +245,5 @@
   setInterval(function () { if (auto && !document.hidden) { k = (k + 1) % chips.length; pick(chips[k]); } }, 2400);
   setInterval(place, 700); window.addEventListener("resize", place); place();
 })();
+(function () { var b = document.getElementById("exGo"), i = document.getElementById("exSearch");
+  if (b && i) b.addEventListener("click", function () { i.focus(); i.dispatchEvent(new Event("input", { bubbles: true })); }); })();
