@@ -8,10 +8,10 @@ window.CUTIQ_CONFIG = {
   currency: "₹",
 
   // Payment page (Razorpay / Instamojo / Cosmofeed / Gumroad link). Leave "" to send buyers to WhatsApp instead.
-  paymentUrl: "",
+  paymentUrl: "https://superprofile.bio/vp/cutiq-399-skills",
 
   // WhatsApp number with country code, digits only, e.g. "919876543210". Leave "" to hide WhatsApp buttons.
-  whatsapp: "",
+  whatsapp: "919664436230",
   whatsappText: "Hi CutIQ, I would like to get the 399 Claude video editing skills.",
 
   // Meta (Facebook) Pixel ID for ad tracking. Leave "" until you have it.
