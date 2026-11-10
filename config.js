@@ -15,7 +15,7 @@ window.CUTIQ_CONFIG = {
   whatsappText: "Hi CutIQ, I would like to get the 399 Claude video editing skills.",
 
   // Meta (Facebook) Pixel ID for ad tracking. Leave "" until you have it.
-  metaPixelId: "",
+  metaPixelId: "1149224780854975",
 
   supportEmail: "",                 // shown in footer / policy pages
   refundPolicy: "",                 // e.g. "7 din ki money-back guarantee" - leave "" if you do not offer one
